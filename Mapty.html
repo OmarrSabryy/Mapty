@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mapty</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Mapty.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
+    <section class="container">
+      <div class="side-area">
+        <div class="logo">
+          <!-- <div class="logo-img"><img src="images/icon.png" alt="" /></div> -->
+          <div class="logo-img"><img src="images/logo.png" alt="" /></div>
+        </div>
+        <div class="activities">
+          <div class="activity-form form-hidden">
+            <div class="activity-type activity-row">
+              <label for="type">Type</label>
+              <select id="type">
+                <option value="running">Running</option>
+                <option value="cycling">Cycling</option>
+              </select>
+            </div>
+            <div class="activity-distance activity-row">
+              <label for="distance">Distance</label>
+              <input id="distance" type="number" placeholder="   km" />
+            </div>
+            <div class="activity-duration activity-row">
+              <label for="duration">Duration</label>
+              <input id="duration" type="number" placeholder="   min" />
+            </div>
+            <div class="activity-cadence activity-row">
+              <label for="cadence">Cadence</label>
+              <input id="cadence" type="number" placeholder="   step/min" />
+            </div>
+            <div class="activity-ElevGain form-hidden activity-row">
+              <label for="ElevGain">Elev Gain</label>
+              <input id="ElevGain" type="number" placeholder="   meters" />
+            </div>
+          </div>
+
+          <!-- <div class="activity activity-running" data-id="run">
+            <div class="activity-date">
+              Running on <span class="date">date</span>
+            </div>
+            <div class="activity-data">
+              <div>
+                <h3>
+                  <span class="icon">🏃‍♂️</span> <span class="value">0</span> KM
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  <span class="icon">⏱</span> <span class="value">0</span> MIN
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  <span class="icon">⚡</span>
+                  <span class="value">0.0</span> MIN/KM
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  <span class="icon">🦶</span> <span class="value">0</span> SPM
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="activity activity-cycling" activity-id="cycle">
+            <div class="activity-date">
+              Cycling on <span class="date">date</span>
+            </div>
+            <div class="activity-data">
+              <div>
+                <h3>
+                  <span class="icon">🚴‍♂️</span> <span class="value">0</span> KM
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  <span class="icon">⏱</span> <span class="value">0</span> MIN
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  <span class="icon">⚡</span>
+                  <span class="value">0.0</span> KM/H
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  <span class="icon">🗻</span> <span class="value">0</span> M
+                </h3>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="footer">
+          <button class="form-hidden" id="reset">RESET ♻</button>
+          <h5>
+            © Copyright by Jonas Schmedtmann. Use for learning or your
+            portfolio. Don't use to teach. Don't claim as your own.
+          </h5>
+        </div>
+      </div>
+      <div id="map" class="map"></div>
+    </section>
+    <script src="Mapty.js"></script>
+  </body>
+</html>
